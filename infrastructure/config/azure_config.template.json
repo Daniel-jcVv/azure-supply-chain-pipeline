@@ -1,0 +1,45 @@
+{
+  "_comment": "Copy this file to azure_config.json and fill in your Azure credentials",
+  "_instructions": [
+    "1. Follow the guide in infrastructure/AZURE_RESOURCES_SETUP.md to create resources",
+    "2. Go to Azure Portal > Your Storage Account > Access keys",
+    "3. Copy the connection strings from each resource",
+    "4. Paste them in the fields below",
+    "5. Save as azure_config.json (this template will not be uploaded to GitHub)"
+  ],
+  "resource_group": {
+    "name": "supplychain-reporting-rg",
+    "location": "eastus"
+  },
+  "storage_account": {
+    "name": "YOUR_STORAGE_ACCOUNT_NAME",
+    "connection_string": "DefaultEndpointsProtocol=https;AccountName=YOUR_ACCOUNT;AccountKey=YOUR_KEY;EndpointSuffix=core.windows.net",
+    "container_name": "supply-chain-master-data"
+  },
+  "data_lake": {
+    "name": "YOUR_DATA_LAKE_NAME",
+    "connection_string": "DefaultEndpointsProtocol=https;AccountName=YOUR_ACCOUNT;AccountKey=YOUR_KEY;EndpointSuffix=core.windows.net",
+    "containers": {
+      "raw": "raw",
+      "processed": "processed",
+      "output": "output"
+    }
+  },
+  "sql_database": {
+    "server": "YOUR_SQL_SERVER_NAME.database.windows.net",
+    "database": "supplychain-dw",
+    "username": "sqladmin",
+    "password": "YOUR_SQL_PASSWORD",
+    "driver": "ODBC Driver 17 for SQL Server",
+    "connection_string": "Server=tcp:YOUR_SQL_SERVER_NAME.database.windows.net,1433;Database=supplychain-dw;User ID=sqladmin;Password=YOUR_PASSWORD;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  },
+  "data_factory": {
+    "name": "YOUR_DATA_FACTORY_NAME",
+    "resource_group": "supplychain-reporting-rg",
+    "location": "eastus"
+  },
+  "paths": {
+    "master_data_source": "../../data_generation/output/master_data",
+    "transactional_data_source": "../../data_generation/output/transactional_data"
+  }
+}

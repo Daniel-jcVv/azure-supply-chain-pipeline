@@ -1,0 +1,149 @@
+# Supply Chain Analytics - Git Ignore
+# Professional .gitignore for Azure Data Engineering Project
+
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-ver
+
+
+# AZURE & CREDENTIALS (CRITICAL - Never commit)
+
+# Environment variables
+.env
+.env.*
+!.env.template
+*.env
+
+# Azure credentials
+infrastructure/.env
+infrastructure/config/azure_config.json
+infrastructure/config/*_config.json
+infrastructure/config/*.txt
+!infrastructure/config/azure_config.template.json
+
+# Azure CLI
+.azure/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# DATA FILES
+# Generated data files
+data_generation/output/
+*.csv
+*.tsv
+*.tsv.gz
+*.parquet
+*.json.gz
+
+# Logs
+*.log
+logs/
+*.log.*
+
+
+# VSCode
+.vscode/
+*.code-workspace
+
+
+# Linux
+*~
+.directory
+.Trash-*
+
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.bak
+*.backup
+
+# Documentation builds
+docs/_build/
+site/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.crt
+*.cer
+*.pfx
+
+# Azure deployment outputs
+deployment_output.json
+azure_resources_*.txt
+
+# KEEP THESE FILES (Examples & Templates)
+# Template files should be committed
+!*.template
+!*.example
+!.env.template
+!azure_config.template.json
+
+# Another files
+context/

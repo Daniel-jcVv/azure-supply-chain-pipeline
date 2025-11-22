@@ -1,0 +1,52 @@
+# Supply Chain Analytics - All Dependencies
+# Single requirements file for entire project
+
+# ============================================================================
+# DATA GENERATION
+# ============================================================================
+
+# Data manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Utilities
+python-dateutil>=2.8.2
+
+# ============================================================================
+# TRANSACTIONAL API
+# ============================================================================
+
+# API framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+pydantic>=2.0.0
+
+# ============================================================================
+# AZURE INFRASTRUCTURE
+# ============================================================================
+
+# Azure authentication
+azure-identity>=1.15.0
+
+# Azure Storage
+azure-storage-blob>=12.19.0
+
+# Azure Management SDKs
+azure-mgmt-resource>=23.0.0
+azure-mgmt-storage>=21.1.0
+azure-mgmt-sql>=3.0.0
+azure-mgmt-datafactory>=4.0.0
+
+# Progress bars
+tqdm>=4.66.0
+
+# ============================================================================
+# DEVELOPMENT (Optional)
+# ============================================================================
+
+# Code quality (uncomment for development)
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.5.0
